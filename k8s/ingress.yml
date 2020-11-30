@@ -9,7 +9,7 @@ metadata:
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
     # name of the secret that contains the user/password definitions
     # found here: https://kubernetes.github.io/ingress-nginx/examples/auth/basic/
-    # kubectl -n namespace_here create secret generic mims-basic-auth --from-file=auth
+    # kubectl -n namespace_here create secret generic jokes-basic-auth --from-file=auth
     nginx.ingress.kubernetes.io/auth-secret: jokes-basic-auth
     # message to display with an appropriate context why the authentication is required
     nginx.ingress.kubernetes.io/auth-realm: "Authentication Required"

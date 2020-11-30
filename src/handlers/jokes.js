@@ -18,8 +18,8 @@ const getJokeByID = async (req, res) => {
 
 const getRandomJoke = async (req, res) => {
   const {
-    categoryQuery,
-    searchQuery,
+    category: categoryQuery,
+    search: searchQuery,
   } = req.query;
 
   const category = categoryQuery && categoryQuery.length > 1024 ? categoryQuery.substring(0, 1024) : categoryQuery;

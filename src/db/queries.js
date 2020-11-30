@@ -64,10 +64,17 @@ const getRandomJoke = async () => poolQuery(`
   LIMIT 20;
 `, []);
 
+const getJokeByID = async (id) => poolQuery(`
+  SELECT *
+  FROM jokes_table
+  WHERE id = $1;
+`, [id])
+
 module.exports = {
   addJoke,
   getJokeCategory,
   getJokeExact,
   getJokeAnyWord,
   getRandomJoke,
+  getJokeByID,
 };
